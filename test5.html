@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    /* background-color: #e0f7fa; */
+    border: 2px solid #004d40;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* color: #b71c1c; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], textarea, select, input[type="file"] {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    /* border: 1px solid #004d40; */
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.game-options, .gender-options {
+    margin-bottom: 15px;
+}
+
+.game-options label, .gender-options label {
+    margin-right: 10px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 30%;
+}
+
+button[type="button"] {
+    /* background-color: #0288d1; */
+    color: white;
+}
+
+button[type="reset"] {
+    /* background-color: #ff5722; */
+    /* color: white; */
+}
+
+button[type="submit"] {
+    /* background-color: #4caf50; */
+    /* color: white; */
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+     </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form>
+            <label for="name">Enter Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="address">Enter Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label>Select Game</label>
+            <div class="game-options">
+                <input type="checkbox" id="hockey" name="game" value="Hockey">
+                <label for="hockey">Hockey</label>
+                <input type="checkbox" id="football" name="game" value="Football">
+                <label for="football">Football</label>
+                <input type="checkbox" id="badminton" name="game" value="Badminton">
+                <label for="badminton">Badminton</label>
+                <input type="checkbox" id="cricket" name="game" value="Cricket">
+                <label for="cricket">Cricket</label>
+                <input type="checkbox" id="volleyball" name="game" value="Volleyball">
+                <label for="volleyball">Volleyball</label>
+            </div>
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="age">Select your age</label>
+            <select id="age" name="age">
+                <option value="">Select</option>
+                <option value="10-20">10-20</option>
+                <option value="21-30">21-30</option>
+                <option value="31-40">31-40</option>
+            </select>
+
+            <label for="photo">Select Photo</label>
+            <input type="file" id="photo" name="photo">
+
+            <div class="buttons">
+                <button type="button" onclick="alert('Button Clicked')">Click Me</button>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit Form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
